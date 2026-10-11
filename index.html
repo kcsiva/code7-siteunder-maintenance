@@ -2,59 +2,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Coming Soon</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sivakumar — Senior Software Engineer specializing in .NET, C#, application development, and reliable software solutions.">
+    <title>Sivakumar | Senior Software Engineer</title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #101827;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+    <style>
+        :root {
+            --background: #f5f7fb;
+            --surface: #ffffff;
+            --text: #172033;
+            --muted: #64748b;
+            --accent: #2563eb;
+            --border: #e2e8f0;
+        }
 
-    .container {
-      padding: 24px;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    .logo {
-      display: block;
-      width: min(280px, 75vw);
-      max-height: 280px;
-      object-fit: contain;
-      margin: 0 auto 32px;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(26px, 5vw, 42px);
-      font-weight: 600;
-      letter-spacing: 5px;
-    }
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
 
-    p {
-      margin-top: 18px;
-      color: #aab7ca;
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
-  </style>
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(960px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .brand img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+        }
+
+        .hero {
+            padding: 86px 0 76px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at top, #dbeafe 0%, transparent 65%),
+                var(--background);
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        h1 {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            line-height: 1.15;
+            margin: 16px 0;
+            letter-spacing: -1.5px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 9px;
+            border: 1px solid var(--accent);
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .button-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .button-secondary {
+            background: white;
+            color: var(--accent);
+        }
+
+        section {
+            padding: 58px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 0 0 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .intro {
+            max-width: 780px;
+            color: #475569;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .skill {
+            background: #e8efff;
+            color: #234a9b;
+            padding: 7px 13px;
+            border-radius: 7px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 6px 24px rgba(15, 23, 42, 0.035);
+        }
+
+        .card-label {
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card h3 {
+            font-size: 1.35rem;
+            line-height: 1.4;
+            margin: 12px 0;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .contact {
+            text-align: center;
+            background: #eaf0fb;
+        }
+
+        .contact p {
+            color: var(--muted);
+        }
+
+        footer {
+            padding: 24px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                padding: 14px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            section {
+                padding: 42px 0;
+            }
+
+            .card {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <main class="container">
-    <img src="./logo.png" alt="Website logo" class="logo">
-    <h1>SITE COMING SOON</h1>
-    <p>Something exciting is on its way.</p>
-  </main>
+    <header>
+        <div class="container nav">
+            <a class="brand" href="#home" aria-label="Sivakumar home">
+                <img src="./logo.png" alt="Site logo">
+                <span>Sivakumar</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="eyebrow">Software Engineering · Problem Solving</div>
+
+                <h1>Hi, I'm Sivakumar.</h1>
+
+                <p class="subtitle">
+                    Senior Software Engineer with 10+ years of experience
+                    building, maintaining, and improving software applications.
+                    Focused on practical engineering, clean solutions, and
+                    solving real business problems.
+                </p>
+
+                <div class="actions">
+                    <a class="button button-primary"
+                       href="./resume.pdf"
+                       target="_blank"
+                       rel="noopener">
+                        View My Resume
+                    </a>
+
+                    <a class="button button-secondary"
+                       href="https://www.pitsolutions.com/blog/the-hidden-cost-of-over-engineering-in-enterprise-net-projects"
+                       target="_blank"
+                       rel="noopener">
+                        Read My Blog
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+
+                <p class="intro">
+                    I'm a Senior Software Engineer at PIT Solutions, with
+                    a background in .NET development and enterprise software.
+                    My work includes application development, production
+                    debugging, incident resolution, data troubleshooting,
+                    and improving the reliability of existing systems.
+                </p>
+
+                <p class="intro">
+                    I believe good engineering is about choosing the right
+                    level of complexity for the problem. I value maintainable
+                    code, thoughtful technical decisions, collaboration,
+                    and solutions that deliver genuine business value.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+
+                <p class="intro">
+                    Technologies and areas I work with:
+                </p>
+
+                <div class="skills">
+                    <span class="skill">C#</span>
+                    <span class="skill">.NET / .NET Core</span>
+                    <span class="skill">ASP.NET</span>
+                    <span class="skill">Angular</span>
+                    <span class="skill">SQL Server</span>
+                    <span class="skill">MongoDB</span>
+                    <span class="skill">Microservices</span>
+                    <span class="skill">RabbitMQ</span>
+                    <span class="skill">Azure DevOps</span>
+                    <span class="skill">CI/CD</span>
+                    <span class="skill">Production Debugging</span>
+                    <span class="skill">API Development</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="container">
+                <h2 class="section-title">Featured Writing</h2>
+
+                <article class="card">
+                    <div class="card-label">Engineering Blog</div>
+
+                    <h3>
+                        The Hidden Cost of Over-Engineering in
+                        Enterprise .NET Projects
+                    </h3>
+
+                    <p>
+                        My thoughts on over-engineering in enterprise
+                        software and why engineering decisions should
+                        be driven by real business needs rather than
+                        unnecessary complexity.
+                    </p>
+
+                    <a href="https://www.pitsolutions.com/blog/the-hidden-cost-of-over-engineering-in-enterprise-net-projects"
+                       target="_blank"
+                       rel="noopener">
+                        Read the full article →
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+
+                <p>
+                    Interested in software engineering, .NET, and
+                    building practical technology solutions?
+                </p>
+
+                <div class="actions">
+                    <a class="button button-primary"
+                       href="https://www.linkedin.com/in/siva-kumar-087701b5/"
+                       target="_blank"
+                       rel="noopener">
+                        Connect on LinkedIn
+                    </a>
+
+                    <a class="button button-secondary"
+                       href="./resume.pdf"
+                       target="_blank"
+                       rel="noopener">
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            © <span id="year">2026</span> Sivakumar. Built with care.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
 </body>
 </html>
-
