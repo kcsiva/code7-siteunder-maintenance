@@ -9,7 +9,7 @@
 
     <meta
         name="description"
-        content="Sivakumar is a Senior Software Engineer specializing in .NET, C#, web application development, APIs, databases, and reliable software solutions."
+        content="Sivakumar is a Senior Software Engineer specializing in .NET, C#, web applications, APIs, databases, and reliable software solutions."
     >
 
     <meta name="theme-color" content="#f8fafc">
@@ -67,13 +67,13 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
         }
 
         .navbar {
-            min-height: 76px;
+            min-height: 72px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -81,18 +81,10 @@
         }
 
         .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 700;
-            font-size: 1.05rem;
-        }
-
-        .brand img {
-            width: 44px;
-            height: 44px;
-            object-fit: contain;
-            border-radius: 10px;
+            color: var(--text);
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: -0.03em;
         }
 
         .nav-links {
@@ -150,7 +142,7 @@
         /* Hero */
 
         .hero {
-            padding: 90px 0 85px;
+            padding: 85px 0;
             background:
                 radial-gradient(
                     circle at 85% 15%,
@@ -222,7 +214,7 @@
             font-size: 0.88rem;
         }
 
-        /* General sections */
+        /* Sections */
 
         .section {
             padding: 78px 0;
@@ -348,7 +340,7 @@
             font-weight: 600;
         }
 
-        /* Blog */
+        /* Featured blog */
 
         .blog-card {
             display: grid;
@@ -549,14 +541,11 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation: text only, no logo -->
     <header class="site-header">
         <div class="container navbar">
 
-            <a class="brand" href="#home" aria-label="Sivakumar homepage">
-                <img src="./logo.png" alt="Sivakumar logo" width="44" height="44">
-                <span>Sivakumar</span>
-            </a>
+            <a class="brand" href="#home">Sivakumar</a>
 
             <nav class="nav-links" aria-label="Main navigation">
                 <a href="#about">About</a>
@@ -574,9 +563,10 @@
         <section class="hero" id="home">
             <div class="container hero-content">
 
+                <!-- Profile photo -->
                 <img
                     src="./profile_pic.png"
-                    alt="Portrait of Sivakumar, Senior Software Engineer"
+                    alt=""
                     class="profile-pic"
                     width="150"
                     height="150"
